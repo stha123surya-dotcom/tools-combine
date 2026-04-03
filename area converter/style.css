@@ -1,0 +1,73 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.app {
+  max-width: 520px;
+  margin: auto;
+  padding: 15px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-controls {
+  display: flex;
+  gap: 10px;
+  width: 30%;
+  padding: 8px;
+  margin: 5px 1%;
+  border-radius: 8px;
+  border: none;
+}
+
+select, button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+button {
+  background: #38bdf8;
+  color: black;
+}
+
+.triangle {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+.triangle input {
+  width: 30%;
+  padding: 8px;
+  margin: 5px 1%;
+  border-radius: 8px;
+  border: none;
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.summary {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+h1, h2, h3 {
+  margin: 5px 0;
+}

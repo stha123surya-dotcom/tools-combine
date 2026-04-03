@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastu Suite Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="tab-bar">
+            <button class="tab-btn active" onclick="openTab(event, 'compass-tab')">
+                <i class="ph ph-compass"></i>
+                <span>Compass</span>
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'guide-tab')">
+                <i class="ph ph-book-open"></i>
+                <span>Area Calculator</span>
+                
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'settings-tab')">
+                <i class="ph ph-gear"></i>
+                <span>Quick Esitmate</span>
+            </button>
+        </nav>
+
+        <div id="compass-tab" class="tab-content active">
+            <div class="selection-panel">
+                <label>Select Element:</label>
+                <select id="roomSelect">
+                    <option value="entrance">Main Entrance</option>
+                    <option value="pooja">Pooja Room</option>
+                    <option value="kitchen">Kitchen</option>
+                    <option value="bedroom">Master Bedroom</option>
+                    <option value="living">Living Room</option>
+                    <option value="septic">Septic Tank</option>
+                    <option value="overhead">Overhead Tank</option>
+                </select>
+            </div>
+
+            <div class="compass-wrapper">
+                <div id="statusRing" class="status-ring"></div>
+                <div class="compass-dial" id="compass">
+                    <div class="indicator"></div>
+                    <div class="marking n">N</div>
+                    <div class="marking ne">NE</div>
+                    <div class="marking e">E</div>
+                    <div class="marking se">SE</div>
+                    <div class="marking s">S</div>
+                    <div class="marking sw">SW</div>
+                    <div class="marking w">W</div>
+                    <div class="marking nw">NW</div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2 id="directionText">North</h2>
+                <p id="degreeText">0°</p>
+                <div id="suggestionBox" class="suggestion-box">Tap Enable to start.</div>
+            </div>
+            <button id="startBtn" class="primary-btn">Enable Sensors</button>
+        </div>
+
+        <div id="guide-tab" class="tab-content">
+            <div class="app">
+    <header>
+      <h1>📐 Area Calculator</h1>
+      <div class="top-controls">
+        <select id="unit">
+          <option value="m">Meter</option>
+          <option value="ft">Feet</option>
+        </select>
+        
+        
+      </div>
+    </header>
+
+    <div id="triangles"></div>
+
+    <button class="add-btn" onclick="addTriangle()">+ Add Triangle</button>
+
+    <section class="summary">
+      <h2>Total Area</h2>
+      <h3 id="totalSq">0</h3>
+      <p id="nepaliHill"></p>
+      <p id="nepaliTerai"></p>
+    </section>
+    <button onclick="resetAll()">🔄 Reset</button>
+  </div>
+
+          </div>
+
+        <div id="settings-tab" class="tab-content">
+            <!-- APP HEADER -->
+        <header class="app-header">
+            <h1>🏗 BuildCalc Pro</h1>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+
+            <!-- FLOOR -->
+            <div class="card">
+                <h2>Floors(Select Nos. of Floors)</h2>
+                <input type="number" id="floorCount" min="1" max="10" value="1">
+            </div>
+
+            <!-- COST -->
+            <div class="card">
+                <h2>Construction Type</h2>
+                <select id="costType">
+                    <option value="2800">Normal</option>
+                    <option value="4000">Premium</option>
+                    <option value="5500">Luxury</option>
+                </select>
+            </div>
+
+            <!-- FLOORS -->
+            <p> Please enter nos of room on the selection field below</p>
+            <div id="floors-container"></div>
+            <P fontcolor="red">"For Detailed estimation Please contact with us." </P>
+            <p> These are assumption based calculation. There are some standard room size calculated for the area calculation. The Rates are calculated standard Rates as per market trends.  </p>
+                <div class="bottom-bar">
+            <div>
+                <small>Total Area</small>
+                <strong id="totalArea">0 sq.ft</strong>
+            </div>
+
+            <div>
+                <small>Estimated Cost</small>
+                <strong id="totalCost">Rs. 0</strong>
+            </div>
+        </div>
+        </div>
+
+        <!-- BOTTOM APP BAR -->
+
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

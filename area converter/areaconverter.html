@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Area Calculator Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📐 Area Calculator</h1>
+      <div class="top-controls">
+        <select id="unit">
+          <option value="m">Meter</option>
+          <option value="ft">Feet</option>
+        </select>
+        
+        
+      </div>
+    </header>
+
+    <div id="triangles"></div>
+
+    <button class="add-btn" onclick="addTriangle()">+ Add Triangle</button>
+
+    <section class="summary">
+      <h2>Total Area</h2>
+      <h3 id="totalSq">0</h3>
+      <p id="nepaliHill"></p>
+      <p id="nepaliTerai"></p>
+    </section>
+    <button onclick="resetAll()">🔄 Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
