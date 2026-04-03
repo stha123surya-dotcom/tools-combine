@@ -71,31 +71,95 @@ body {
 }
 
 /* Compass Specific CSS (Merged from previous) */
-.compass-wrapper {
-    position: relative;
-    width: 260px;
-    height: 260px;
-    margin: 30px auto;
+.container {
+    background: var(--glass);
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
 }
 
+header h1 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.divider {
+    height: 3px;
+    width: 50px;
+    background: var(--accent);
+    margin: 10px auto 20px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    background: white;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.compass-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Segment Highlighter Ring */
 .status-ring {
     position: absolute;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    border: 8px solid #eee;
-    transition: 0.4s;
+    border: 6px solid var(--neutral);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
 .compass-dial {
-    width: 85%; height: 85%;
-    margin: 7.5%;
+    width: 85%;
+    height: 85%;
     border-radius: 50%;
     border: 4px solid var(--primary);
     position: relative;
     background: #fff;
+    transition: transform 0.1s linear;
 }
 
-.marking { position: absolute; width: 100%; height: 100%; text-align: center; font-weight: bold; padding-top: 10px;}
+.indicator {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 20px;
+    background: red;
+    z-index: 10;
+    border-radius: 2px;
+}
+
+.marking {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 15px;
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+/* Positioning rotations as per your specified degrees */
 .n { transform: rotate(0deg); }
 .ne { transform: rotate(45deg); }
 .e { transform: rotate(90deg); }
@@ -105,23 +169,29 @@ body {
 .w { transform: rotate(270deg); }
 .nw { transform: rotate(315deg); }
 
+.info-card h2 { margin: 10px 0 5px; color: var(--primary); }
+
 .suggestion-box {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 15px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    border-left: 5px solid #ccc;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: #f8f9fa;
+    min-height: 60px;
+    border-left: 5px solid var(--neutral);
+    transition: 0.3s;
 }
 
-.primary-btn {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
+#startBtn {
     background: var(--primary);
     color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    cursor: pointer;
     font-weight: bold;
     margin-top: 20px;
+    width: 100%;
 }
 
 ///areacoverter
@@ -190,7 +260,7 @@ button {
 
 
 
-///Quick Esitmate
+///*Quick Esitmate*/
 
 
 /* HEADER */
